@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, .uppercase {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.hero-section {
+    /* Photo Excel haute définition avec un overlay plus léger pour bien voir l'image */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+input, select, textarea {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.05);
+}
+
+.btn-premium {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}

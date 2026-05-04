@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Excel 2026 - Inscription Professionnelle</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased text-sm font-light">
+
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xl font-normal tracking-tight text-blue-950 leading-none">FORMATION EXCEL</span>
+                <span class="text-[9px] font-medium text-blue-600/60 tracking-[0.3em] mt-1 uppercase">Expertise & Analyse</span>
+            </div>
+            <a href="tel:+2439078210945" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-full transition-all flex items-center shadow-lg shadow-blue-200 text-[11px] uppercase tracking-wider">
+                <i class="fas fa-phone-alt mr-2 text-[10px]"></i> +243 907 821 0945
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero-section text-white py-20 md:py-32 text-center relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-light mb-6 tracking-tight leading-[1] uppercase">
+                MAÎTRISEZ<br><span class="text-blue-400 font-normal">LA DATA</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                2 mois intensifs pour transformer votre carrière. Matadi & En ligne.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
+                    <span class="text-[10px] font-medium tracking-[0.2em] uppercase">Session Juin 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 mb-32">
+        <div class="grid lg:grid-cols-12 gap-10">
+
+            <div class="lg:col-span-5 space-y-8">
+                <div class="bg-white rounded-[2.5rem] shadow-2xl p-10 border border-slate-100">
+                    <h2 class="text-2xl font-normal mb-10 text-slate-900 border-b border-slate-50 pb-8 tracking-tight italic">LES INFOS</h2>
+                    <div class="space-y-10">
+                        <div class="group">
+                            <span class="text-[9px] font-medium text-blue-600 uppercase tracking-[0.3em] block mb-2 opacity-60">CALENDRIER</span>
+                            <p class="text-2xl font-normal text-slate-900 leading-none">08 JUIN — 10 AOÛT</p>
+                            <p class="text-slate-400 text-xs mt-2 font-light italic">Session intensive de 2 mois</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-slate-50/50 p-5 rounded-3xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-300">
+                                <p class="text-[9px] font-medium text-slate-400 uppercase tracking-widest mb-2">MATIN</p>
+                                <p class="text-lg font-normal text-slate-800 tracking-tight">10h — 12h</p>
+                            </div>
+                            <div class="bg-slate-50/50 p-5 rounded-3xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-300">
+                                <p class="text-[9px] font-medium text-slate-400 uppercase tracking-widest mb-2">SOIR</p>
+                                <p class="text-lg font-normal text-slate-800 tracking-tight">16h — 18h</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-[9px] font-medium text-blue-600 uppercase tracking-[0.3em] block mb-2 opacity-60">LOCATION</span>
+                            <p class="text-lg font-normal text-slate-900 uppercase leading-snug tracking-tight">MATADI, RÉF : ENTRÉE SEBO</p>
+                            <p class="text-blue-500 font-light text-[10px] italic mt-2 uppercase tracking-widest">En ligne disponible partout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
+                    <div class="bg-blue-950 p-10 text-white relative">
+                        <h2 class="text-4xl font-light tracking-tighter italic uppercase">REJOINDRE</h2>
+                        <p class="text-blue-400 font-medium text-xs mt-2 uppercase tracking-widest opacity-80">Finalisez votre inscription</p>
+                    </div>
+
+                    <div id="success-msg" class="hidden p-16 text-center bg-white">
+                        <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8">
+                            <i class="fas fa-check text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-light text-slate-900 mb-4 tracking-tighter uppercase italic">C'est validé !</h3>
+                        <p class="text-slate-500 mb-10 font-light max-w-sm mx-auto">Vos informations sont maintenant enregistrées.</p>
+                        <button onclick="location.reload()" class="bg-slate-900 text-white font-medium py-4 px-10 rounded-2xl text-[10px] uppercase tracking-[0.2em] shadow-xl hover:bg-black transition-all">Retour</button>
+                    </div>
+
+                    <form id="registration-form" class="p-10 space-y-8 bg-white font-light">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] ml-2">NOM COMPLET</label>
+                                <input type="text" name="nom" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-slate-50 font-light outline-none focus:border-blue-500 focus:bg-white transition-all text-slate-800">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] ml-2">ADRESSE EMAIL</label>
+                                <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-slate-50 font-light outline-none focus:border-blue-500 focus:bg-white transition-all text-slate-800">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] ml-2">TÉLÉPHONE (WHATSAPP)</label>
+                                <input type="tel" name="telephone" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-slate-50 font-light outline-none focus:border-blue-500 focus:bg-white transition-all text-slate-800">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] ml-2">CHOIX VACATION</label>
+                                <select name="vacation" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-slate-50 font-light outline-none appearance-none cursor-pointer focus:border-blue-500 focus:bg-white transition-all text-slate-800">
+                                    <option value="" disabled selected>Veuillez choisir...</option>
+                                    <option value="10h-12h">MATIN (10h — 12h)</option>
+                                    <option value="16h-18h">SOIR (16h — 18h)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-50">
+                            <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] block mb-5 ml-2">MODE DE SUIVI</label>
+                            <div class="flex flex-wrap gap-10 px-2">
+                                <label class="flex items-center cursor-pointer group">
+                                    <input type="radio" name="mode" value="Présentiel" checked class="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                                    <span class="ml-4 text-[11px] font-medium text-slate-800 uppercase tracking-widest group-hover:text-blue-600 transition-all">Présentiel</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer group">
+                                    <input type="radio" name="mode" value="En ligne" class="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                                    <span class="ml-4 text-[11px] font-medium text-slate-800 uppercase tracking-widest group-hover:text-blue-600 transition-all">En ligne</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] ml-2">MESSAGE (OPTIONNEL)</label>
+                            <textarea name="message" rows="3" class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-slate-50 font-light outline-none focus:border-blue-500 focus:bg-white transition-all text-slate-800" placeholder="Vos attentes..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-6 rounded-2xl shadow-xl transition-all transform hover:-translate-y-1 active:scale-[0.98] uppercase tracking-[0.2em] text-[11px] border-b-2 border-blue-900 mt-4">
+                            VALIDEZ L'INSCRIPTION
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-20 text-center">
+        <p class="text-[9px] font-medium text-slate-300 uppercase tracking-[0.6em] px-6">
+            &copy; 2026 Tony Nimi — All Rights Reserved
+        </p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxK_pAvLfRCEfl00jzyd_9dSv0OARjB5ss_U66s8BH41J-GDr117sNFsI0WfdNbZoK1yA/exec';
+        const form = document.getElementById('registration-form');
+        const btn = document.getElementById('submit-btn');
+        const success = document.getElementById('success-msg');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-3"></i> SYNCHRONISATION...';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form),
+                mode: 'no-cors'
+            })
+            .then(() => {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch(error => {
+                alert("Erreur de connexion.");
+                btn.disabled = false;
+                btn.innerHTML = "VALIDEZ L'INSCRIPTION";
+            });
+        });
+    </script>
+</body>
+</html>
