@@ -184,30 +184,44 @@
         </p>
     </footer>
 
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzcO1pMyn8XuePBGkqw6ElHwWbUA0aIBfK-0zQAWp4xlBd_y90auAIitHxXq2W4FWbHQg/exec';
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzCMWHEU8YOSOEUQ-O7DI0LP6B1hen6wLHV9Y2YlXHZS468uV3GhCwGGLAT2ctIdwfjzw/exec';
   const form = document.getElementById('registration-form');
   const btn = document.getElementById('submit-btn');
   const success = document.getElementById('success-msg');
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+    
+    // ✅ Logs pour debug
+    console.log('📤 Script URL:', scriptURL);
+    console.log('📋 Données envoyées:', Object.fromEntries(new FormData(form)));
+    
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Synchronisation...';
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Envoi...';
     btn.classList.add('opacity-75');
 
-    fetch(scriptURL, {
-      method: 'POST',
-      body: new URLSearchParams(new FormData(form)),
-      mode: 'no-cors'
-    })
+            // Utilisation de URLSearchParams pour une compatibilité maximale avec GAS
+            const formData = new FormData(form);
+            const params = new URLSearchParams();
+            for (const pair of formData) {
+                params.append(pair[0], pair[1]);
+            }
+
+            fetch(scriptURL, {
+              method: 'POST',
+              body: params,
+              mode: 'no-cors'
+            })
     .then(() => {
+      console.log('✅ Requête partie (no-cors = réponse non lisible)');
       form.classList.add('hidden');
       success.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     })
-    .catch(() => {
-      alert("Erreur de connexion.");
+    .catch((err) => {
+      console.error('Erreur fetch:', err);
+      alert("Erreur de connexion.\n\nOuvrez la console (F12) pour plus de détails.");
       btn.disabled = false;
       btn.innerHTML = "✓ Validez l'inscription";
       btn.classList.remove('opacity-75');
